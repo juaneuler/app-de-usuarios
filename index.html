@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Link de tipografía Roboto de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="styles.css">
+    <title>App de usuarios</title>
+</head>
+
+<body>
+    <main>
+        <h1>APP DE USUARIOS</h1>
+        <div class="instrucciones">
+            <p>
+                <strong>Instrucciones:</strong><br>
+                Utilizá la barra de búsqueda para filtrar usuarios por nombre, usuario o email.<br>
+                Seleccioná el campo por el que querés filtrar y hacé clic en "Filtrar".<br>
+                Podés ordenar la lista por nombre, usuario o email usando el selector y el botón "Ordenar".<br>
+                Esa función ordena tanto la lista de usuarios por defecto, como la filtrada con la barra de
+                búsqueda!<br>
+                Para volver a ver todos los usuarios, hacé clic en "Reiniciar filtros".
+            </p>
+        </div>
+        <div class="controlesUsuarios">
+            <!-- Filtro acorde la categoría elegida y texto escrito -->
+            <div class="filtroUsuarios">
+                <label for="busqueda">Escribí acá lo que quieras buscar</label>
+                <input type="text" id="busqueda" placeholder="Buscar...">
+
+                <label for="campoFiltro">Filtrar por:</label>
+                <select id="campoFiltro">
+                    <option value="name">Nombre</option>
+                    <option value="username">Usuario</option>
+                    <option value="email">Email</option>
+                </select>
+                <button id="botonFiltrar">Filtrar</button>
+            </div>
+            <!-- Orden acorde a la categoría elegida -->
+            <div class="ordenUsuarios">
+                <label for="campoOrden">Ordenar por:</label>
+                <select id="campoOrden">
+                    <option value="name">Nombre</option>
+                    <option value="username">Usuario</option>
+                    <option value="email">Email</option>
+                </select>
+                <button id="botonOrdenar">Ordenar</button>
+            </div>
+            <div class="reiniciar">
+                <button id="botonReiniciar">Reiniciar filtros</button>
+            </div>
+        </div>
+        <!-- Lista de usuarios tal cual viene de la API -->
+        <div id="listaUsuarios"></div>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
